@@ -1,0 +1,135 @@
+body {
+    font-family: 'Itim', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header .logo img {
+    max-height: 80px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8d493a;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    text-decoration: none;
+    color: #8d493a;
+    padding: 10px 15px;
+    border: 1px solid #8d493a;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #8d493a;
+    color: white;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h1 {
+    text-align: center;
+    color: #8d493a;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d0b8a8;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cart-item-img {
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+.cart-item-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.remove-item {
+    background-color: #8d493a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #d0b8a8;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    background-color: #8d493a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #d0b8a8;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+ 
+    
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #8d493a;
+}

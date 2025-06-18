@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <title>Menu - SoSo Bakery</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="favicon.svg"
+          alt="SoSo Bakery Logo"
+          class="logo-img"
+          draggable="false"
+        />
+        <h1>SoSo Bakery</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html"
+              ><span>H</span><span>o</span><span>m</span><span>e</span></a
+            >
+          </li>
+          <li>
+            <a href="menu.html"
+              ><span>M</span><span>e</span><span>n</span><span>u</span></a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"
+              ><span>A</span><span>b</span><span>o</span><span>u</span
+              ><span>t</span><span> U</span><span>s</span></a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><span>C</span><span>o</span><span>n</span><span>t</span
+              ><span>a</span><span>c</span><span>t</span></a
+            >
+          </li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="login.html" class="auth-button">Login</a>
+          <a href="signup.html" class="auth-button">Signup</a>
+        </div>
+        <a href="cart.html" class="cart-icon" aria-label="View cart">
+          <span class="material-icons">shopping_cart</span>
+          <span class="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="menu-section">
+          <div class="overlay"></div>
+          <h1>Menu</h1>
+          <div class="menu-category">
+            <div class="image-row">
+              <!-- Highlight Item Template -->
+              <div class="highlight-item">
+                <img
+                  src="../imgs/bread-take-away.jpg"
+                  alt="Classic Baguette"
+                  class="product-img"
+                />
+                <div class="product-info">
+                  <h4>Classic Baguette</h4>
+                  <button
+                    class="add-to-cart"
+                    onclick="addToCart('Classic Baguette')"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              
+              <div class="highlight-item">
+                <img
+                  src="../imgs/s1.jpg"
+                  alt="Sourdough Bread"
+                  class="product-img"
+                />
+                <div class="product-info">
+                  <h4>Sourdough Bread</h4>
+                  <button
+                    class="add-to-cart"
+                    onclick="addToCart('Sourdough Bread')"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <img
+                  src="../imgs/s2.jpg"
+                  alt="Multigrain Bread"
+                  class="product-img"
+                />
+                <div class="product-info">
+                  <h4>Multigrain Bread</h4>
+                  <button
+                    class="add-to-cart"
+                    onclick="addToCart('Multigrain Bread')"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <img src="../imgs/s3.jpg" alt="Focaccia" class="product-img" />
+                <div class="product-info">
+                  <h4>Focaccia</h4>
+                  <button class="add-to-cart" onclick="addToCart('Focaccia')">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <img
+                  src="../imgs/s5.jpg"
+                  alt="Flaky Croissants"
+                  class="product-img"
+                />
+                <div class="product-info">
+                  <h4>Flaky Croissants</h4>
+                  <button
+                    class="add-to-cart"
+                    onclick="addToCart('Flaky Croissants')"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="menu.js"></script>
+  </body>
+</html>

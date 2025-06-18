@@ -1,0 +1,224 @@
+/* Base styling */
+body {
+  font-family: 'Itim', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: url("../imgs/bg2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styling */
+header {
+  background: #ffffff; /* Solid background color for header */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  padding: 15px 20px; /* Slightly less padding for a more compact look */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and navigation */
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center; 
+  /* Center logo and title vertically */
+}
+
+ .logo-img {
+  width: 50px; /* Logo width */
+  height: auto;
+  margin-right: 10px;
+ 
+}
+
+header h1 {
+  font-size: 2em; /* Adjusted font size */
+  color: #8d493a;
+  margin: 0;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Increased gap for better spacing */
+  list-style: none;
+  margin: 0;
+  margin-right: 20px; /* Added right margin to move nav items to the left */
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #8d493a; /* Normal text color */
+  font-weight: bold;
+  font-size: 30px;
+  display: inline-block; /* Allows spacing around the link */
+  transition: color 0.3s; /* Transition for color change */
+}
+
+.nav-links li a span {
+  display: inline-block; /* Ensure the text-shadow applies properly */
+  transition: text-shadow 0.3s; /* Transition for the glow effect */
+}
+.logo h1 {
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+
+
+.nav-links li a:hover {
+  color: #ac5922; /* Change overall text color on hover */
+}
+
+.nav-links li a:hover span {
+  text-shadow: 0 0 5px #d0b8a8, 0 0 10px #d0b8a8, 0 0 15px #d0b8a8; /* Glow effect on each character */
+}
+
+
+
+.auth-buttons {
+  display: flex;
+  gap: 15px; /* Increased gap for buttons */
+}
+
+.auth-button {
+  padding: 10px 20px; /* Increased padding for better click area */
+  background-color: transparent;
+  color: #8d493a;
+  font-weight: bold;
+  border: 2px solid #8d493a;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #8d493a;
+  color: #fff;
+  transform: scale(1.05); /* Slightly scale up */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: #d0b8a8;
+}
+
+/* Call-to-action button */
+.cta-button {
+  padding: 10px 20px;
+  background-color: #8d493a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.cta-button:hover {
+  border: 2px solid #f18035; /* Change color on hover */
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  margin: 20px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.hero:hover {
+  transform: scale(1.02);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+
+/* ... existing styles ... */
+
+/* Highlights section */
+.highlights {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.highlight-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s, border 0.3s;
+  border: 2px solid transparent; /* Initially transparent border */
+  text-decoration: none;
+  color: #8d493a;
+}
+
+
+.highlight-item .material-icons {
+    color: #8d493a; /* Set the icon color */
+}
+
+.highlight-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+  border: 4px solid #f18035; /* Add border on hover */
+}
+
+/* ... existing styles ... */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px 0; /* Vertical padding */
+    background-color: #f8e1d1; /* Light background color */
+}
+
+.social-media {
+    margin-top: 10px; /* Space between text and icons */
+}
+
+.social-media a {
+  margin: 0 10px; /* Space between icons */
+  color: #8d493a; /* Icon color */
+  text-decoration: none; /* Remove underline */
+  font-size: 24px; /* Size of the icons */
+  transition: color 0.3s; /* Transition effect for hover */
+}
+
+.social-media a:hover {
+  color: #ac5922; /* Darker color on hover */
+}
+
+
+
+.cart-icon {
+  color: #8d493a; /* Color of the cart icon */
+  font-size: 30px; /* Size of the cart icon */
+  margin-left: 20px; /* Space between the last button and the cart icon */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Transition effect for hover */
+}
+
+.cart-icon:hover {
+  color: #ac5922; /* Darker color on hover */
+}

@@ -1,0 +1,51 @@
+/* Base styling for contact page */
+.contact {
+    max-width: 600px; /* Maximum width for the contact section */
+    margin: 40px auto; /* Center the contact section */
+    padding: 20px; /* Padding for the contact section */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.contact h2 {
+    text-align: center; /* Center the heading */
+    color: #8d493a; /* Heading color */
+    font-size: 2em; /* Font size for heading */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.contact-form {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+}
+
+.contact-form label {
+    margin-bottom: 5px; /* Space between label and input */
+    color: #333; /* Label color */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space between inputs */
+    font-size: 16px; /* Font size for inputs */
+}
+
+.contact-form button {
+    background-color: #8d493a; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.contact-form button:hover {
+    background-color: #ac5922; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
