@@ -2,6 +2,9 @@
 
 A responsive and visually engaging bakery website built with HTML, CSS, and JavaScript. This project showcases bakery products, enables smooth navigation between sections, and delivers an appealing user experience.
 
+![image](https://github.com/user-attachments/assets/e9f34b7c-31ae-45aa-b8e8-5339ef540fd2)
+
+
 ## 🧩 Features
 
 - **Homepage** with hero banner, featured items, and navigation menu  
@@ -12,7 +15,10 @@ A responsive and visually engaging bakery website built with HTML, CSS, and Java
 - **Cart system** allowing users to “add” items and view a checkout screen (pure front-end simulation)  
 - **Responsive design** for mobile-first layout and desktop compatibility
 - **Demo**
+
+  
 https://github.com/user-attachments/assets/e626d999-0634-4ee6-af15-6c7e355c3720
+
 
 ## 🛠️ Tech Stack
 
