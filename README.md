@@ -33,3 +33,9 @@ https://github.com/user-attachments/assets/e626d999-0634-4ee6-af15-6c7e355c3720
 ```bash
 git clone https://github.com/esraamhmd/bakery-web.git
 cd bakery-web
+
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
