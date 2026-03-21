@@ -1,0 +1,57 @@
+
+.login-section {
+  background: rgba(255,255,255,0.93);
+  padding: 36px 32px;
+  margin: 50px auto 60px;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 92%;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.login-section h2 { font-size: 1.7em; margin-bottom: 20px; color: #8d493a; }
+
+.login-form { display: flex; flex-direction: column; text-align: left; }
+
+.login-form label {
+  margin-bottom: 4px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1.5px solid #d0b8a8;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Itim', sans-serif;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.login-form input:focus { border-color: #8d493a; outline: none; }
+
+.login-form .cta-button { width: 100%; margin-top: 6px; text-align: center; }
+
+.form-error-banner {
+  background: #fdecea;
+  border: 1px solid #f5c6cb;
+  color: #c0392b;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.register-link { margin-top: 16px; font-size: 0.95rem; color: #666; }
+.register-link a { color: #8d493a; text-decoration: underline; font-weight: bold; }
+.register-link a:hover { color: #ac5922; }
+
+@media (max-width: 480px) {
+  .login-section { padding: 28px 18px; margin: 30px auto 40px; }
+  .login-section h2 { font-size: 1.4em; }
+}
