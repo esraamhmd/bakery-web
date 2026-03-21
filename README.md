@@ -7,15 +7,15 @@
 
 <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
 <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
-<img src="https://img.shields.io/badge/LocalStorage-API-1D546D?style=for-the-badge" />
+
 
 <br/><br/>
+
+### A full-featured, responsive bakery website using React.js + TypeScript with authentication, cart management, and online payment.
 
 
 https://github.com/user-attachments/assets/ee9cc1d5-b2bd-4560-ad55-9a50028aaf94
 
-
-### A full-featured, responsive bakery website using React.js + TypeScript with authentication, cart management, and online payment.
 
 <br/>
 
