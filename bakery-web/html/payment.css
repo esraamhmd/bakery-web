@@ -1,0 +1,66 @@
+body {
+    font-family: 'Itim', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.payment-container {
+    width: 80%; /* Set the width to 80% of the viewport */
+    max-width: 600px; /* Optional: Set a maximum width */
+    margin: 50px auto; /* Center the container with auto margins */
+    padding: 20px; /* Add padding inside the container */
+    background-color: white; /* Set the background color of the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+input {
+    width: 90%; /* Full width for input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #d0b8a8; /* Border color for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+}
+
+button {
+    background-color: #8d493a; /* Button background color */
+    color: white; /* Text color for button */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 50%; /* Set width to 50% */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make the button a block element for centering */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button:hover {
+    background-color: #d0b8a8; /* Background color change on hover */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px; /* Padding for footer */
+    background-color: #f4f4f4; /* Background color for footer */
+}

@@ -1,0 +1,58 @@
+/* Base styling */
+body {
+    font-family: 'Itim', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url("../imgs/bg2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* About Us section styling */
+.about-us {
+    max-width: 800px; /* Max width for readability */
+    margin: 40px auto; /* Centering the section */
+    padding: 20px; /* Padding for breathing room */
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center; /* Centered text */
+}
+
+.about-us h2 {
+    font-size: 2.5em; /* Heading size */
+    color: #8d493a; /* Color matching the theme */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.about-us p {
+    font-size: 1.2em; /* Body text size */
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px 0; /* Vertical padding */
+    background-color: #f8e1d1; /* Light background color */
+}
+
+.social-media {
+    margin-top: 10px; /* Space between text and icons */
+}
+
+.social-media a {
+    margin: 0 10px; /* Space between icons */
+    color: #8d493a; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Size of the icons */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.social-media a:hover {
+    color: #ac5922; /* Darker color on hover */
+}
