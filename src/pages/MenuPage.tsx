@@ -12,7 +12,6 @@ const menuItems: MenuItem[] = [
   { name: "Flaky Croissants",  price: 2.5,  img: "s6.jpg", category: "Pastries" },
   { name: "Chocolate Danish",  price: 3.0,  img: "s7.jpg", category: "Pastries" },
   { name: "Almond Croissant",  price: 3.5,  img: "s8.jpg", category: "Pastries" },
-  { name: "Pain au Chocolat",  price: 2.75, img: "s9.jpg", category: "Pastries" },
   { name: "Fruit Tart",        price: 4.5,  img: "s9.jpg", category: "Pastries" },
 ];
 
