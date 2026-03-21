@@ -1,4 +1,4 @@
-
+/* eslint-disable react-refresh/only-export-components */
 import {
   createContext,
   useContext,
@@ -20,7 +20,6 @@ export interface AuthContextType {
   logout: () => void;
 }
 
-// ── Validation helpers ──
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateEmail(email: string): string | null {
@@ -35,7 +34,7 @@ function validatePassword(password: string): string | null {
   return null;
 }
 
-// ── Stored users key ──
+
 const USERS_KEY = "soso_users";
 const SESSION_KEY = "soso_session";
 
