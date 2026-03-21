@@ -1,4 +1,4 @@
-# 🥖 SoSo Bakery — Bakery Web Application
+#  SoSo Bakery - Bakery Web Application
 
 <div align="center">
 
@@ -10,6 +10,10 @@
 <img src="https://img.shields.io/badge/LocalStorage-API-1D546D?style=for-the-badge" />
 
 <br/><br/>
+
+
+https://github.com/user-attachments/assets/ee9cc1d5-b2bd-4560-ad55-9a50028aaf94
+
 
 ### A full-featured, responsive bakery website using React.js + TypeScript with authentication, cart management, and online payment.
 
