@@ -14,7 +14,10 @@
 ### A full-featured, responsive bakery website using React.js + TypeScript with authentication, cart management, and  payment.
 
 
-https://github.com/user-attachments/assets/ee9cc1d5-b2bd-4560-ad55-9a50028aaf94
+
+
+https://github.com/user-attachments/assets/7f8b9922-5b44-4eb9-9dff-7143e100113c
+
 
 
 <br/>
