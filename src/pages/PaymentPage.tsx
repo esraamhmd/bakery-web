@@ -17,7 +17,6 @@ export default function PaymentPage() {
     e.preventDefault();
     setError("");
 
-    // short clean validation — same as real payment forms
     if (!name)                          { setError("Please enter cardholder name.");   return; }
     if (!/^\d{16}$/.test(number))       { setError("Card number must be 16 digits.");  return; }
     if (!/^\d{2}\/\d{2}$/.test(expiry)) { setError("Expiry must be MM/YY format.");    return; }

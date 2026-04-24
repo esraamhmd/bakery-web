@@ -20,12 +20,18 @@ export default function Header() {
 
   return (
     <header>
-      {/* Title — click goes to home, no favicon icon */}
       <div className="logo" onClick={() => { navigate("/"); closeMenu(); }}>
+        <img
+          src="/favicon.svg"
+          alt="SoSo Bakery Logo"
+          className="logo-img"
+          draggable={false}
+          onError={(e) => (e.currentTarget.style.display = "none")}
+        />
         <h1>SoSo Bakery</h1>
       </div>
 
-      {/* Desktop nav */}
+   
       <nav className="nav-desktop">
         <ul className="nav-links">
           {navItems.map(({ to, label }) => (
@@ -40,7 +46,7 @@ export default function Header() {
         <div className="auth-buttons">
           {isLoggedIn ? (
             <>
-              {/* Bootstrap person-circle icon + user name */}
+            
               <span className="user-greeting">
                 <i className="bi bi-person-circle"></i> {user?.name}
               </span>
@@ -65,7 +71,7 @@ export default function Header() {
         </button>
       </nav>
 
-    
+     
       <div className="nav-mobile-right">
         <button className="cart-icon" onClick={() => navigate("/cart")} aria-label="Cart">
           <span className="material-icons">shopping_cart</span>

@@ -8,7 +8,7 @@ const menuItems: MenuItem[] = [
   { name: "Sourdough Bread",   price: 4.0,  img: "s2.jpg", category: "Breads"   },
   { name: "Multigrain Bread",  price: 3.5,  img: "s3.jpg", category: "Breads"   },
   { name: "Focaccia",          price: 5.0,  img: "s4.jpg", category: "Breads"   },
-  { name: "Ciabatta",          price: 2.25, img: "s5.jpg", category: "Breads"   },
+ 
   { name: "Flaky Croissants",  price: 2.5,  img: "s6.jpg", category: "Pastries" },
   { name: "Chocolate Danish",  price: 3.0,  img: "s7.jpg", category: "Pastries" },
   { name: "Almond Croissant",  price: 3.5,  img: "s8.jpg", category: "Pastries" },
