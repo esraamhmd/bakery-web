@@ -4,19 +4,23 @@ import { useCart } from "../context/CartContext";
 interface MenuItem { name: string; price: number; img: string; category: string; }
 
 const menuItems: MenuItem[] = [
-  { name: "Classic Baguette",  price: 3.0,  img: "s1.jpg", category: "Breads"   },
-  { name: "Sourdough Bread",   price: 4.0,  img: "s2.jpg", category: "Breads"   },
-  { name: "Multigrain Bread",  price: 3.5,  img: "s3.jpg", category: "Breads"   },
-  { name: "Focaccia",          price: 5.0,  img: "s4.jpg", category: "Breads"   },
- 
-  { name: "Flaky Croissants",  price: 2.5,  img: "s6.jpg", category: "Pastries" },
-  { name: "Chocolate Danish",  price: 3.0,  img: "s7.jpg", category: "Pastries" },
-  { name: "Almond Croissant",  price: 3.5,  img: "s8.jpg", category: "Pastries" },
-  { name: "Fruit Tart",        price: 4.5,  img: "s9.jpg", category: "Pastries" },
+  { name: "Classic Baguette",  price: 3.0,  img: "Classic Baguette.jpg",  category: "Breads"   },
+  { name: "Sourdough Bread",   price: 4.0,  img: "Sourdough Bread.jpg",   category: "Breads"   },
+  { name: "Multigrain Bread",  price: 3.5,  img: "Multigrain Bread.jpg",  category: "Breads"   },
+  { name: "Focaccia",          price: 5.0,  img: "Focaccia.jpg",          category: "Breads"   },
+  { name: "Flaky Croissants",  price: 2.5,  img: "Flaky Croissants.jpg",  category: "Pastries" },
+  { name: "Chocolate Danish",  price: 3.0,  img: "Chocolate Danish.jpg",  category: "Pastries" },
+  { name: "Almond Croissant",  price: 3.5,  img: "Almond Croissant.jpg",  category: "Pastries" },
+  { name: "Fruit Tart",        price: 4.5,  img: "Fruit Tart.jpg",        category: "Pastries" },
+  { name: "Cinnamon Roll",     price: 3.5,  img: "Cinnamon Roll.jpg",     category: "Pastries" },
+  { name: "Blueberry Muffin",  price: 3.0,  img: "Blueberry Muffin.jpg",  category: "Pastries" },
+  { name: "Chocolate Muffin",  price: 3.5,  img: "Chocolate Muffin.jpg",  category: "Pastries" },
+  { name: "Cheese Danish",     price: 4.0,  img: "Cheese Danish.jpg",     category: "Pastries" },
+  { name: "Brioche Loaf",      price: 4.5,  img: "Brioche Loaf.jpg",      category: "Breads"   },
+  { name: "Garlic Bread",      price: 4.0,  img: "garlic bread.jpg",      category: "Breads"   },
+  { name: "Pretzel",           price: 2.5,  img: "Pretzel.jpg",           category: "Breads"   },
+
 ];
-
-const categories = ["Breads", "Pastries"];
-
 
 const loadedImages = new Map<string, boolean>();
 
@@ -25,7 +29,6 @@ const FALLBACK =
   "%3Crect width='200' height='200' fill='%23f8e1d1'/%3E" +
   "%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E" +
   "%F0%9F%8D%9E%3C/text%3E%3C/svg%3E";
-
 
 const ProductCard = memo(function ProductCard({
   item,
@@ -36,25 +39,22 @@ const ProductCard = memo(function ProductCard({
   onAdd: (name: string) => void;
   eager: boolean;
 }) {
-
   const [imgLoaded, setImgLoaded] = useState(() => loadedImages.get(item.img) ?? false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   function handleLoad() {
-   
     loadedImages.set(item.img, true);
     setImgLoaded(true);
   }
 
   function handleError() {
-    loadedImages.set(item.img, true); 
+    loadedImages.set(item.img, true);
     setImgLoaded(true);
     if (imgRef.current) imgRef.current.src = FALLBACK;
   }
 
   return (
     <div className="card">
-     
       <div className={`card-img-wrapper ${imgLoaded ? "loaded" : "loading"}`}>
         <img
           ref={imgRef}
@@ -62,15 +62,12 @@ const ProductCard = memo(function ProductCard({
           alt={item.name}
           width={200}
           height={200}
-      
           loading={eager ? "eager" : "lazy"}
-         
           decoding="async"
           onLoad={handleLoad}
           onError={handleError}
         />
       </div>
-
       <div className="card-body">
         <h5 className="card-title">{item.name}</h5>
         <p className="card-text">${item.price.toFixed(2)}</p>
@@ -91,7 +88,6 @@ export default function MenuPage() {
   const [showMessage, setShowMessage] = useState(false);
   const [cartMessage, setCartMessage] = useState("");
 
-
   const handleAddToCart = useCallback((itemName: string) => {
     addToCart(itemName);
     setCartMessage(`"${itemName}" added to cart!`);
@@ -104,22 +100,19 @@ export default function MenuPage() {
       {showMessage && <div className="cart-message">{cartMessage}</div>}
 
       <div className="menu-section">
-        {categories.map((cat, catIdx) => (
-          <div key={cat} className="menu-category">
-            <div className="image-row">
-              {menuItems
-                .filter((item) => item.category === cat)
-                .map((item, itemIdx) => (
-                  <ProductCard
-                    key={item.name}
-                    item={item}
-                    onAdd={handleAddToCart}
-                    eager={catIdx === 0 && itemIdx < 3}
-                  />
-                ))}
-            </div>
+        <div className="menu-category">
+         
+          <div className="image-row">
+            {menuItems.map((item, itemIdx) => (
+              <ProductCard
+                key={item.name}
+                item={item}
+                onAdd={handleAddToCart}
+                eager={itemIdx < 4}
+              />
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
