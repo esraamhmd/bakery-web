@@ -16,53 +16,50 @@ export default function SignupPage() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-
-    
-    if (!name)                    { setError("Please enter your name.");              return; }
-    if (!email)                   { setError("Please enter your email.");             return; }
-    if (!/\S+@\S+\.\S+/.test(email)) { setError("Please enter a valid email.");      return; }
-    if (!password)                { setError("Please enter a password.");             return; }
-    if (password.length < 6)      { setError("Password must be at least 6 chars.");  return; }
-    if (password !== confirm)     { setError("Passwords do not match.");              return; }
-
+    if (!name)                        { setError("Please enter your name.");             return; }
+    if (!email)                       { setError("Please enter your email.");            return; }
+    if (!/\S+@\S+\.\S+/.test(email))  { setError("Please enter a valid email.");         return; }
+    if (!password)                    { setError("Please enter a password.");            return; }
+    if (password.length < 6)          { setError("Password must be at least 6 chars.");  return; }
+    if (password !== confirm)         { setError("Passwords do not match.");             return; }
     setLoading(true);
     setTimeout(() => {
       const result = signup(name, email, password);
       setLoading(false);
-      if (result.ok) {
-        navigate("/");
-      } else {
-        setError(result.error ?? "Something went wrong.");
-      }
+      if (result.ok) { navigate("/"); }
+      else { setError(result.error ?? "Something went wrong."); }
     }, 400);
   }
 
   return (
     <main>
       <section className="signup-section">
-        
-        <div className="form-icon">
+        <div className="form-icon" aria-hidden="true">
           <i className="bi bi-person-plus-fill"></i>
         </div>
-        <h2>Create Account</h2>
+        <h1>Create Account</h1>
 
-        {error && <div className="form-error-banner">{error}</div>}
+        {error && <div className="form-error-banner" role="alert">{error}</div>}
 
-        <form className="signup-form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" value={name} placeholder="Your name"
+        <form className="signup-form" onSubmit={handleSubmit} noValidate>
+          <label htmlFor="signup-name">Name</label>
+          <input type="text" id="signup-name" value={name}
+            placeholder="Your name" autoComplete="name"
             onChange={(e) => { setName(e.target.value); setError(""); }} />
 
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" value={email} placeholder="your@email.com"
+          <label htmlFor="signup-email">Email</label>
+          <input type="email" id="signup-email" value={email}
+            placeholder="your@email.com" autoComplete="email"
             onChange={(e) => { setEmail(e.target.value); setError(""); }} />
 
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" value={password} placeholder="Min. 6 characters"
+          <label htmlFor="signup-password">Password</label>
+          <input type="password" id="signup-password" value={password}
+            placeholder="Min. 6 characters" autoComplete="new-password"
             onChange={(e) => { setPassword(e.target.value); setError(""); }} />
 
-          <label htmlFor="confirm">Confirm Password</label>
-          <input type="password" id="confirm" value={confirm} placeholder="Repeat password"
+          <label htmlFor="signup-confirm">Confirm Password</label>
+          <input type="password" id="signup-confirm" value={confirm}
+            placeholder="Repeat password" autoComplete="new-password"
             onChange={(e) => { setConfirm(e.target.value); setError(""); }} />
 
           <button type="submit" className="cta-button" disabled={loading}>

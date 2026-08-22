@@ -22,7 +22,7 @@ export interface CartContextType {
   cartCount: number;
 }
 
-// same price list as original cart.js
+
 const prices: Record<string, number> = {
   "Classic Baguette": 3.0,
   "Sourdough Bread": 4.0,

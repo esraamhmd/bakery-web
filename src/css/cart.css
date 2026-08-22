@@ -126,7 +126,7 @@
 }
 .clear-cart:hover { background-color: #8d493a; color: #fff; }
 
-/* ── Responsive ── */
+
 @media (max-width: 768px) {
   .cart-container { width: 96%; padding: 20px 16px; margin: 16px auto 40px; }
   .cart-container h1 { font-size: 1.6rem; margin-bottom: 20px; }

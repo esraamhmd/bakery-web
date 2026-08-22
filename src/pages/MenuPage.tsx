@@ -31,9 +31,7 @@ const FALLBACK =
   "%F0%9F%8D%9E%3C/text%3E%3C/svg%3E";
 
 const ProductCard = memo(function ProductCard({
-  item,
-  onAdd,
-  eager,
+  item, onAdd, eager,
 }: {
   item: MenuItem;
   onAdd: (name: string) => void;
@@ -60,8 +58,9 @@ const ProductCard = memo(function ProductCard({
           ref={imgRef}
           src={`/imgs/${item.img}`}
           alt={item.name}
-          width={200}
-          height={200}
+        
+          width={300}
+          height={300}
           loading={eager ? "eager" : "lazy"}
           decoding="async"
           onLoad={handleLoad}
@@ -69,15 +68,17 @@ const ProductCard = memo(function ProductCard({
         />
       </div>
       <div className="card-body">
+       
         <h5 className="card-title">{item.name}</h5>
         <p className="card-text">${item.price.toFixed(2)}</p>
-        <a
-          href="#"
+       
+        <button
           className="btn btn-primary"
-          onClick={(e) => { e.preventDefault(); onAdd(item.name); }}
+          aria-label={`Add ${item.name} to cart`}
+          onClick={() => onAdd(item.name)}
         >
           Add to Cart
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -97,11 +98,13 @@ export default function MenuPage() {
 
   return (
     <div>
-      {showMessage && <div className="cart-message">{cartMessage}</div>}
-
+      {showMessage && (
+        <div className="cart-message" role="status" aria-live="polite">
+          {cartMessage}
+        </div>
+      )}
       <div className="menu-section">
         <div className="menu-category">
-         
           <div className="image-row">
             {menuItems.map((item, itemIdx) => (
               <ProductCard

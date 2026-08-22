@@ -2,7 +2,7 @@ export default function AboutUsPage() {
   return (
     <main>
       <section className="about-us">
-        <h2>About SoSo Bakery</h2>
+        <h1>About SoSo Bakery</h1>
         <p>
           At SoSo Bakery, we believe that baking is an art form. Established in 2024, our mission
           is to provide the freshest, most delicious baked goods made with love and quality

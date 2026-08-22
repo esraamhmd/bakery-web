@@ -30,52 +30,46 @@ export default function ContactPage() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-
     if (!name)                       { setError("Please enter your name.");    return; }
     if (!email)                      { setError("Please enter your email.");   return; }
     if (!/\S+@\S+\.\S+/.test(email)) { setError("Please enter a valid email."); return; }
     if (!message.trim())             { setError("Please enter your message."); return; }
-
     setSent(true);
     setName(""); setEmail(""); setMessage(""); setSuggestion("");
-    // auto-dismiss toast after 4 seconds
     setTimeout(() => setSent(false), 4000);
   }
 
   return (
     <main>
       {sent && (
-        <div className="contact-toast">
+        <div className="contact-toast" role="status" aria-live="polite">
           Message sent! We'll get back to you soon.
         </div>
       )}
 
       <section className="contact">
-        <div className="form-icon">
+        <div className="form-icon" aria-hidden="true">
           <i className="bi bi-envelope-fill"></i>
         </div>
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
 
-        {error && <div className="form-error-banner">{error}</div>}
+        {error && <div className="form-error-banner" role="alert">{error}</div>}
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} noValidate>
           <label htmlFor="c-name">Name</label>
           <input type="text" id="c-name" value={name} placeholder="Your name"
+            autoComplete="name"
             onChange={(e) => { setName(e.target.value); setError(""); }} />
 
           <label htmlFor="c-email">Email</label>
           <div className="email-wrapper">
-            <input
-              type="email"
-              id="c-email"
-              value={email}
-              placeholder="your@email.com"
-              onChange={(e) => handleEmailChange(e.target.value)}
+            <input type="email" id="c-email" value={email} placeholder="your@email.com"
               autoComplete="email"
-            />
+              onChange={(e) => handleEmailChange(e.target.value)} />
             {suggestion && (
-              <div className="email-suggestion"
-                onClick={() => { setEmail(suggestion); setSuggestion(""); }}>
+              <div className="email-suggestion" role="button" tabIndex={0}
+                onClick={() => { setEmail(suggestion); setSuggestion(""); }}
+                onKeyDown={(e) => e.key === "Enter" && setEmail(suggestion)}>
                 Did you mean <strong>{suggestion}</strong>? Tap to use
               </div>
             )}

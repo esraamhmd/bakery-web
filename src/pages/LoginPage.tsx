@@ -14,41 +14,38 @@ export default function LoginPage() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-
-    // short clean validation — same as real websites
     if (!email)    { setError("Please enter your email.");    return; }
     if (!password) { setError("Please enter your password."); return; }
-
     setLoading(true);
     setTimeout(() => {
       const result = login(email, password);
       setLoading(false);
-      if (result.ok) {
-        navigate("/");
-      } else {
-        setError(result.error ?? "Invalid email or password.");
-      }
+      if (result.ok) { navigate("/"); }
+      else { setError(result.error ?? "Invalid email or password."); }
     }, 400);
   }
 
   return (
     <main>
       <section className="login-section">
-        {/* Bootstrap person-circle icon */}
-        <div className="form-icon">
+        <div className="form-icon" aria-hidden="true">
           <i className="bi bi-person-circle"></i>
         </div>
-        <h2>Login</h2>
+        <h1>Login</h1>
 
-        {error && <div className="form-error-banner">{error}</div>}
+        {error && <div className="form-error-banner" role="alert">{error}</div>}
 
-        <form className="login-form" onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" value={email} placeholder="your@email.com"
+        <form className="login-form" onSubmit={handleSubmit} noValidate>
+          <label htmlFor="login-email">Email</label>
+          <input type="email" id="login-email" value={email}
+            placeholder="your@email.com"
+            autoComplete="email"
             onChange={(e) => { setEmail(e.target.value); setError(""); }} />
 
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" value={password} placeholder="Password"
+          <label htmlFor="login-password">Password</label>
+          <input type="password" id="login-password" value={password}
+            placeholder="Password"
+            autoComplete="current-password"
             onChange={(e) => { setPassword(e.target.value); setError(""); }} />
 
           <button type="submit" className="cta-button" disabled={loading}>
