@@ -1,17 +1,17 @@
 #  SoSo Bakery - Bakery Web Application
 
 <div align="center">
-
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-
 <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
+<img src="https://img.shields.io/badge/Context_API-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
 <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
-
 
 <br/><br/>
 
 ### A full-featured, responsive bakery website using React.js + TypeScript with authentication, cart management, and  payment.
+## 🔗 Live Demo
+https://soso-bakery.vercel.app/
 
 
 
@@ -33,8 +33,6 @@ https://github.com/user-attachments/assets/7f8b9922-5b44-4eb9-9dff-7143e100113c
 
 ---
 
-## 🔗 Live Demo
-https://bakery-web-kwjh.vercel.app/
 
 ## ✨ Features
 
