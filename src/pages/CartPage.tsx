@@ -54,7 +54,7 @@ export default function CartPage() {
                   src={`/imgs/${itemImages[item.name] ?? item.name.toLowerCase().replace(/ /g, "-") + ".jpg"}`}
                   alt={item.name}
                   className="cart-item-img"
-                  /* FIX CLS: explicit dimensions */
+                  
                   width={90}
                   height={90}
                   onError={(e) => { e.currentTarget.src = FALLBACK; }}
